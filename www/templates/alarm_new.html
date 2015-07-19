@@ -1,0 +1,40 @@
+<ion-view view-title="Νέα ειδοποίηση">  
+<ion-content>
+<div class="list">
+	<label class="item item-input">
+		<span class="input-label">Όνομα ειδοποίησης</span>
+		<input type="text">
+	</label>
+	<label class="item item-input">
+		<span class="input-label">Περιγραφή ειδοποίησης</span>
+		<input type="text">
+	</label>
+	<label class="item item-input item-select">
+		<div class="input-label">
+			Επιλογή δρομολογίου
+		</div>
+		<select>
+			<option>Α11</option>
+			<option>Β11</option>
+			<option>Β1</option>
+			<option>Α12</option>
+			<option>724</option>
+			<option selected>Αεροδρομίου EXPRESS</option>
+		</select>
+	</label>
+	<label class="item item-input">
+                    <span class="input-label">Χρόνος ενημέρωσης δρομολογίου βάση τη θέση μου σε λεπτά</span>
+                    <input type="number" value="1">
+                </label>
+	<ionic-datepicker idate="currentDate" disablepreviousdates="true"  disablefuturedates="false" callback="datePickerCallback" title="title">
+	<button class="button button-block button-positive"> Επιλογή ημερομηνίας </button>
+</ionic-datepicker>
+<ionic-timepicker etime="slots.epochTime" format="slots.format" step="slots.step" callback="timePickerCallback">    
+<button class="button button-block button-positive"> Επιλογή ώρας </button>
+</ionic-timepicker>
+</div>
+<label class="item">
+	<button class="button button-block button-positive" ng-click="showNew()" type="submit">Αποθήκευση ειδοποιήσης</button>
+</label>
+</ion-content>
+</ion-view>

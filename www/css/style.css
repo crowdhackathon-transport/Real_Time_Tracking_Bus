@@ -1,0 +1,136 @@
+/* Empty. Add your own CSS if you like */
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.scroll {
+  height: 100%;
+}
+
+/* your custom CSS \*/
+	@-moz-keyframes pulsate {
+		from {
+			-moz-transform: scale(0.25);
+			opacity: 1.0;
+		}
+		95% {
+			-moz-transform: scale(1.3);
+			opacity: 0;
+		}
+		to {
+			-moz-transform: scale(0.3);
+			opacity: 0;
+		}
+	}
+	@-webkit-keyframes pulsate {
+		from {
+			-webkit-transform: scale(0.25);
+			opacity: 1.0;
+		}
+		95% {
+			-webkit-transform: scale(1.3);
+			opacity: 0;
+		}
+		to {
+			-webkit-transform: scale(0.3);
+			opacity: 0;
+		}
+	}
+	/* get the container that's just outside the marker image, 
+		which just happens to have our Marker title in it */
+	#map div.gmnoprint[title="My Location"] {
+		-moz-animation: pulsate 1.5s ease-in-out infinite;
+		-webkit-animation: pulsate 1.5s ease-in-out infinite;
+		border:1pt solid #fff;
+		/* make a circle */
+		-moz-border-radius:51px;
+		-webkit-border-radius:51px;
+		border-radius:51px;
+		/* multiply the shadows, inside and outside the circle */
+		-moz-box-shadow:inset 0 0 5px #06f, inset 0 0 5px #06f, inset 0 0 5px #06f, 0 0 5px #06f, 0 0 5px #06f, 0 0 5px #06f;
+		-webkit-box-shadow:inset 0 0 5px #06f, inset 0 0 5px #06f, inset 0 0 5px #06f, 0 0 5px #06f, 0 0 5px #06f, 0 0 5px #06f;
+		box-shadow:inset 0 0 5px #06f, inset 0 0 5px #06f, inset 0 0 5px #06f, 0 0 5px #06f, 0 0 5px #06f, 0 0 5px #06f;
+		/* set the ring's new dimension and re-center it */
+		height:51px!important;
+		margin:-5px 0 0 -5px;
+		width:51px!important;
+	}
+	/* hide the superfluous marker image since it would expand and shrink with its containing element */
+/*	#map div[style*="987654"][title] img {*/
+	#map div.gmnoprint[title="My Location"] img {
+		display:none;
+	}
+	/* compensate for iPhone and Android devices with high DPI, add iPad media query */
+	@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (device-width: 768px) {
+		#map div.gmnoprint[title="I might be here"] {
+			margin:-5px 0 0 -5px;
+		}
+	}
+
+
+.busbutton{
+	  display: block;
+  float: left;
+  border-radius: 4px;
+  background: #014c85;
+  color: white;
+  width: 100%;
+    margin-bottom: 5px;
+    transition:0.3s all;
+}
+.businfo p {
+	  margin: 0 !important;
+}
+.busbutton:hover{	 
+    opacity: 0.6;
+}
+
+.busstations{
+	opacity: 1;
+	transition:0.3s all;
+	background:;
+}
+.busstations:hover{
+opacity: 0.6;
+}
+
+
+	.menu {
+		background-image: url("/img/back1.jpg");
+		background-repeat: no-repeat;
+		background-size: 100% 100% ;
+	}
+
+	.list:first-child .item{
+		background-color: rgba(255,255,255, 0.5) 
+		color: white !important;
+
+	}
+	
+	.item {
+		background-color: rgba(255,255,255, 0.5) !important;
+		color: white ;
+	}
+
+	.item .item-complex {
+		background-color: rgba(255,255,255, 0.6) !important;
+		color: black;
+	}
+
+	.item-content {
+		background-color: rgba(255,255,255, 0.6) !important;
+		color: black;
+	}
+	.list .item{
+		  
+		  color:black;
+		  transition:0.3s all;
+		  opacity: 0.8;
+
+	}
+		.list .item:hover{
+		  font-weight: bold;
+		  color:black;
+		  opacity: 1;
+	}

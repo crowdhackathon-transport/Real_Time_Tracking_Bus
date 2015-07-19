@@ -1,0 +1,45 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Αγορά εισητηρίου</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="closePay()">Κλείσιμο</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <form ng-submit="doPay()">
+            <div class="list">
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Τύπος εισητηρίου
+                    </div>
+                    <select>
+                        <option>Κανονικό</option>
+                        <option>Μειωμένο</option>
+                        <option>Ημερήσιο</option>
+                        <option>Πέντε ημερών</option>
+                        <option>3ημερο Τουριστικό</option>
+                        <option selected>Αεροδρομίου EXPRESS</option>
+                    </select>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Ποσότητα</span>
+                    <input type="number" value="1">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Τιμή</span>
+                    <input type="text" value="5,00">
+                </label>
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">Αγορά τώρα!</button>
+                </label>
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">Γίνετε συνδρομητής</button>
+                </label>
+                <a class="item item-thumbnail-right" href="#">
+                    <img style="  height: auto;" src="img/visa.png">
+                </a>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>
+

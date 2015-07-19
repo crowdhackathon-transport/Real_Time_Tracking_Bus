@@ -1,0 +1,9 @@
+<ion-view view-title="Στάσεις">
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="stop in nearStops" class="busstations" ui-sref="app.search" style="cursor:pointer;">
+            {{stop.stop_name}} - {{stop.stop_desc}} ( <span style="color:red;">{{stop.distance}}</span> μέτρα)
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
